@@ -1,19 +1,30 @@
 {
-  "name": "react-skeleton",
+  "name": "tictactoe",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Real time web Tic-Tac-Toe",
+  "main": "server.js",
   "scripts": {
-    "start": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
+  "author": "Alexander Di Battista",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexdibattista/tic-tac-toe.git"
+  },
   "dependencies": {
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.2.0",
+    "express": "^4.13.4",
+    "express-react-views": "^0.9.0",
+    "jade": "^1.11.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
+    "socket.io": "^1.4.5",
     "watchify": "^3.7.0"
+  },
+  "devDependencies": {
+    "devtool": "^1.7.6"
   }
 }
