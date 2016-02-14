@@ -1,0 +1,23 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "Real time web Tic-Tac-Toe",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Alexander Di Battista",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-react-views": "^0.9.0",
+    "jade": "^1.11.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "socket.io": "^1.4.5"
+  },
+  "devDependencies": {
+    "devtool": "^1.7.6"
+  }
+}
