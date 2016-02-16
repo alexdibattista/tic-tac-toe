@@ -6,8 +6,10 @@ var DefaultLayout = React.createClass({
       <html>
         <head>
           <title>{this.props.title}</title>
+          <link href='/css/bootstrap.min.css' rel='stylesheet'/>
           <script src='/js/react.js'></script>
           <script src='/js/react-dom.js'></script>
+          <script async src='/js/bootstrap.min.js'></script>
           <script async src='/js/main.js'></script>
         </head>
         <body>{this.props.children}</body>

@@ -7,7 +7,7 @@ var Board = require('../models/board');
 /* GET home page. */
 router.get('/', function (req, res) {
   var board = new Board();
-  
+
   if (board.board.length === 0) {
     board.initializeBoard();
   }

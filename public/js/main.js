@@ -19032,53 +19032,63 @@ module.exports = require('./lib/React');
 
 },{"./lib/React":53}],159:[function(require,module,exports){
 var React = require('react');
-var ListItem = require('./ListItem.jsx');
+var BoardCell = require('./BoardCell.jsx');
 
-var ingredients = [{ id: 1, text: 'ham' }, { id: 2, text: 'tomato' }, { id: 3, text: 'chips' }];
-
-var List = React.createClass({
-  displayName: 'List',
+var Board = React.createClass({
+  displayName: 'Board',
 
   render: function () {
-    var listItems = ingredients.map(function (item) {
-      return React.createElement(ListItem, { key: item.id, ingredient: item.text });
-    });
+
+    var createCell = function (player, x, y) {
+      return React.createElement(BoardCell, { key: x + ',' + y, text: player });
+    };
 
     return React.createElement(
       'ul',
       null,
-      listItems
+      this.props.cells.map(createCell)
     );
   }
 });
 
-module.exports = List;
+module.exports = Board;
 
-},{"./ListItem.jsx":160,"react":158}],160:[function(require,module,exports){
+},{"./BoardCell.jsx":160,"react":158}],160:[function(require,module,exports){
 var React = require('react');
-var ListItem = React.createClass({
-  displayName: 'ListItem',
+
+var BoardCell = React.createClass({
+  displayName: 'BoardCell',
 
   render: function () {
-    return React.createElement(
-      'li',
-      null,
-      React.createElement(
-        'h4',
-        null,
-        this.props.ingredient
-      )
-    );
+    return React.createElement('div', null);
   }
 });
 
-module.exports = ListItem;
+module.exports = BoardCell;
 
 },{"react":158}],161:[function(require,module,exports){
 var React = require('react');
+var Board = require('./Board.jsx');
+
+var BoardManager = React.createClass({
+  displayName: 'BoardManager',
+
+  getInitialState: function () {
+    return { cells: [], move: '' };
+  },
+
+  render: function () {
+    return React.createElement(Board, { cells: this.state.cells });
+  }
+});
+
+module.exports = BoardManager;
+
+},{"./Board.jsx":159,"react":158}],162:[function(require,module,exports){
+var React = require('react');
 var ReactDom = require('react-dom');
-var List = require('./components/List.jsx');
+var BoardManager = require('./components/BoardManager.jsx');
 
-ReactDom.render(React.createElement(List, null), document.getElementById('ingredients'));
+ReactDom.render(React.createElement(BoardManager, null), document.getElementById('board'));
 
-},{"./components/List.jsx":159,"react":158,"react-dom":29}]},{},[161]);
+},{"./components/BoardManager.jsx":161,"react":158,"react-dom":29}]},{},[162]);

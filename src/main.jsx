@@ -1,5 +1,5 @@
 var React = require('react');
 var ReactDom = require('react-dom');
-var List = require('./components/List.jsx');
+var BoardManager = require('./components/BoardManager.jsx');
 
-ReactDom.render(<List />, document.getElementById('ingredients'));
+ReactDom.render(<BoardManager />, document.getElementById('board'));
