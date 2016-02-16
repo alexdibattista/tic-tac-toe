@@ -9,6 +9,7 @@ var DefaultLayout = React.createClass({
           <link href='/css/bootstrap.min.css' rel='stylesheet'/>
           <script src='/js/react.js'></script>
           <script src='/js/react-dom.js'></script>
+          <script async src='/js/jquery.min.js'></script>
           <script async src='/js/bootstrap.min.js'></script>
           <script async src='/js/main.js'></script>
         </head>

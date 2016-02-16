@@ -3,9 +3,9 @@ var React = require('react');
 var BoardCell = React.createClass({
   render: function () {
     return (
-      <div>
-        
-      </div>
+      <li>
+        {this.props.cell.text}
+      </li>
     );
   },
 });

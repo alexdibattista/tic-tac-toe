@@ -19039,13 +19039,13 @@ var Board = React.createClass({
 
   render: function () {
 
-    var createCell = function (player, x, y) {
-      return React.createElement(BoardCell, { key: x + ',' + y, text: player });
+    var createCell = function (cell, index) {
+      return React.createElement(BoardCell, { key: index + cell.text, cell: cell });
     };
 
     return React.createElement(
-      'ul',
-      null,
+      'div',
+      { className: 'row' },
       this.props.cells.map(createCell)
     );
   }
@@ -19060,7 +19060,11 @@ var BoardCell = React.createClass({
   displayName: 'BoardCell',
 
   render: function () {
-    return React.createElement('div', null);
+    return React.createElement(
+      'li',
+      null,
+      this.props.cell.text
+    );
   }
 });
 
@@ -19074,7 +19078,9 @@ var BoardManager = React.createClass({
   displayName: 'BoardManager',
 
   getInitialState: function () {
-    return { cells: [], move: '' };
+    return { cells: [{ id: 0, text: 'X' }, { id: 1, text: '' }, { id: 2, text: '' }, { id: 3, text: '' }, { id: 4, text: '' }, { id: 5, text: '' }, { id: 6, text: '' }, { id: 7, text: '' }, { id: 8, text: '' }],
+      move: ''
+    };
   },
 
   render: function () {
