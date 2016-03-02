@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www/tictactoe":{"guestpath":"/var/www/tictactoe","hostpath":"/Users/alex/Documents/Personal/tic-tac-toe","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/alex/Documents/Personal/tic-tac-toe/vagrant","disabled":false,"__vagrantfile":true}}}
