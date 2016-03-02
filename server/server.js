@@ -37,18 +37,18 @@ app.listen(app.get('port'), function () {
 });
 
 // Testing board
-var board = new Board();
-
-board.initializeBoard();
-board.move(0, 0, 0);
-board.move(1, 0, 1);
-board.move(0, 0, 2);
-board.move(1, 1, 0);
-board.move(0, 1, 1);
-board.move(1, 1, 2);
-board.move(1, 2, 1);
-board.move(0, 2, 2);
-board.move(1, 2, 0);
-console.log(board.board);
+// var board = new Board();
+//
+// board.initializeBoard();
+// board.move(0, 0, 0);
+// board.move(1, 0, 1);
+// board.move(0, 0, 2);
+// board.move(1, 1, 0);
+// board.move(0, 1, 1);
+// board.move(1, 1, 2);
+// board.move(1, 2, 1);
+// board.move(0, 2, 2);
+// board.move(1, 2, 0);
+// console.log(board.board);
 
 module.exports = app;
