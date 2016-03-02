@@ -5,7 +5,7 @@ var Index = React.createClass({
   render: function () {
     return (
       <DefaultLayout title={this.props.title}>
-        <div class="container">
+        <div className="container">
           <div id="board"></div>
         </div>
       </DefaultLayout>
