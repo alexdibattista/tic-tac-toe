@@ -8,11 +8,7 @@ var Board = React.createClass({
       return <BoardCell key={index + cell.text} cell={cell} />;
     };
 
-    return (
-      <div className="row">
-        {this.props.cells.map(createCell)}
-      </div>
-    );
+    return (<div>{this.props.cells.map(createCell)}</div>);
   },
 });
 
